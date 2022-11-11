@@ -16,4 +16,11 @@
       }
     }
   }
+
+  .announcement {
+    margin: 15px 0;
+    &-data {
+      width: 100%;
+    }
+  }
 }

@@ -7,16 +7,19 @@
     </div>
   </header>
   <section>
-    <a tuiAction>
-      <tui-marker-icon
-        size="s"
-        src="tuiIconLikeLarge"
-        class="tui-island__marker positive"
-      ></tui-marker-icon>
-      <section>
-        <h3 class="header tui-text_body-s">Header</h3>
-        <p class="description tui-text_body-xs">Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores at, eligendi id illum in molestias praesentium quia. Adipisci architecto asperiores autem consequatur ipsam iure magni nihil obcaecati repellendus ullam.</p>
-      </section>
-    </a>
+    <ng-container *ngFor="let item of list">
+      <a class="announcement" tuiAction>
+        <tui-marker-icon
+          size="s"
+          src="tuiIconLikeLarge"
+          class="tui-island__marker positive"
+        ></tui-marker-icon>
+        <section class="announcement-data">
+<!--          <h3 class="header tui-text_body-s">Header</h3>-->
+          <p class="description">{{ item.Description }}</p>
+          <p class="description tui-text_body-xs">{{ item.Location | location }}</p>
+        </section>
+      </a>
+    </ng-container>
   </section>
 </tui-root>

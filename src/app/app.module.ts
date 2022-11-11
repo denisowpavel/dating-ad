@@ -12,9 +12,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {TuiActionModule, TuiInputModule, TuiMarkerIconModule, TuiToggleModule} from '@taiga-ui/kit';
+import { LocationPipe } from './pipes/location.pipe';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LocationPipe],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
