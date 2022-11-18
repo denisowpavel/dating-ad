@@ -2,8 +2,17 @@
   <header tuiMode="onDark" class="dark">
     <h1>Header <tui-svg src="tuiIconHeartLarge" class="icon"></tui-svg></h1>
     <div>
-      <button tuiButton size="s" icon="tuiIconFilter">Options</button>
-      <button tuiButton size="s" icon="tuiIconPlus">Add</button>
+      <button
+        tuiButton
+        (click)="showFilterDialog()"
+        size="s"
+        icon="tuiIconFilter"
+      >
+        Options
+      </button>
+      <button tuiButton (click)="showAddDialog()" size="s" icon="tuiIconPlus">
+        Add
+      </button>
     </div>
   </header>
   <section>
@@ -15,9 +24,11 @@
           class="tui-island__marker positive"
         ></tui-marker-icon>
         <section class="announcement-data">
-<!--          <h3 class="header tui-text_body-s">Header</h3>-->
+          <!--          <h3 class="header tui-text_body-s">Header</h3>-->
           <p class="description">{{ item.Description }}</p>
-          <p class="description tui-text_body-xs">{{ item.Location | location }}</p>
+          <p class="description tui-text_body-xs">
+            {{ item.Location | location }}
+          </p>
         </section>
       </a>
     </ng-container>

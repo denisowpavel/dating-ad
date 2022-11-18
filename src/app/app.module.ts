@@ -4,18 +4,27 @@ import {
   TuiDialogModule,
   TuiAlertModule,
   TUI_SANITIZER,
-  TuiModeModule, TuiButtonModule, TuiSvgModule,
+  TuiModeModule,
+  TuiButtonModule,
+  TuiSvgModule,
 } from '@taiga-ui/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {TuiActionModule, TuiInputModule, TuiMarkerIconModule, TuiToggleModule} from '@taiga-ui/kit';
+import {
+  TuiActionModule,
+  TuiInputModule,
+  TuiMarkerIconModule,
+  TuiToggleModule,
+} from '@taiga-ui/kit';
 import { LocationPipe } from './pipes/location.pipe';
+import { FilterComponent } from './components/filter/filter.component';
+import { AddComponent } from './components/add/add.component';
 
 @NgModule({
-  declarations: [AppComponent, LocationPipe],
+  declarations: [AppComponent, LocationPipe, FilterComponent, AddComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
