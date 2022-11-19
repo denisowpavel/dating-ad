@@ -6,7 +6,7 @@ import {
   TUI_SANITIZER,
   TuiModeModule,
   TuiButtonModule,
-  TuiSvgModule,
+  TuiSvgModule, TuiDataListModule,
 } from '@taiga-ui/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -16,12 +16,13 @@ import { AppComponent } from './app.component';
 import {
   TuiActionModule,
   TuiInputModule,
-  TuiMarkerIconModule,
+  TuiMarkerIconModule, TuiSelectModule, TuiTextAreaModule,
   TuiToggleModule,
 } from '@taiga-ui/kit';
 import { LocationPipe } from './pipes/location.pipe';
 import { FilterComponent } from './components/filter/filter.component';
 import { AddComponent } from './components/add/add.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [AppComponent, LocationPipe, FilterComponent, AddComponent],
@@ -38,6 +39,10 @@ import { AddComponent } from './components/add/add.component';
     TuiToggleModule,
     TuiMarkerIconModule,
     TuiSvgModule,
+    TuiTextAreaModule,
+    ReactiveFormsModule,
+    TuiDataListModule,
+    TuiSelectModule,
   ],
   providers: [{ provide: TUI_SANITIZER, useClass: NgDompurifySanitizer }],
   bootstrap: [AppComponent],

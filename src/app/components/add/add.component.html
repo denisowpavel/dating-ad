@@ -1,1 +1,37 @@
-<p>add works!</p>
+<form
+    class="container"
+    [formGroup]="announcementForm"
+>
+    <div class="tui-row">
+
+        <div class="tui-col_md-12">
+            <tui-text-area
+                formControlName=""
+                [expandable]="true"
+                [maxLength]="1000"
+            >
+                Your ad
+            </tui-text-area>
+        </div>
+    </div>
+    <div class="tui-row">
+
+        <div class="tui-col_md-6">
+            <tui-select formControlName="format" class="formatSelector">
+              Who are you:
+        <ng-template tuiDataList>
+          <tui-data-list>
+            <button
+              *ngFor="let item of generatorService.formatList"
+              tuiOption
+              [value]="item.code"
+            >
+              {{ item.label }}
+            </button>
+          </tui-data-list>
+        </ng-template>
+      </tui-select>
+
+        </div>
+    </div>
+</form>
