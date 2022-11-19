@@ -1,5 +1,5 @@
 :host {
-  header {
+  & header {
     color: var(--tui-base-01);
     background-color: var(--tui-base-08);
     position: sticky;
@@ -8,12 +8,26 @@
 
     display: flex;
     justify-content: space-between;
-    & > div {
-      display: flex;
-      align-items: center;
-      & > * {
-        margin: 0 5px;
-      }
+    align-items: center;
+
+    & .controls > * {
+      margin: 0 5px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Lato;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 31px;
+      letter-spacing: 1.7px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+
+    & .slogan {
+      margin-top: -12px;
+      font-size: 12px;
     }
   }
 
