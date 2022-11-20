@@ -1,8 +1,8 @@
 export interface ILocation {
-  Country: string;
-  Region?: string;
-  City: string;
-  Area?: string;
-  Latitude: number;
-  Longitude: number;
+  country: string;
+  region?: string;
+  city: string;
+  area?: string;
+  latitude: number;
+  longitude: number;
 }

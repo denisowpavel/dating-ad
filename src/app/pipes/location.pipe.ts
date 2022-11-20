@@ -6,13 +6,13 @@ import { ILocation } from '@interfaces/location';
 })
 export class LocationPipe implements PipeTransform {
   transform(value: ILocation, ...args: unknown[]): string {
-    let out = value.Country;
-    if (value.Region) {
-      out += `, ${value.Region}`;
+    let out = value.country;
+    if (value.region) {
+      out += `, ${value.region}`;
     }
-    out += `, ${value.City}`;
-    if (value.Area) {
-      out += `, ${value.Area}`;
+    out += `, ${value.city}`;
+    if (value.area) {
+      out += `, ${value.area}`;
     }
     return out;
   }

@@ -16,30 +16,30 @@ export class AnnouncementService {
   public MOCList(): Observable<IAnnouncement[]> {
     return of([
       {
-        Id: '0',
-        Gender: Gender.Male,
-        LookingFor: Gender.Female,
-        Goal: Goal.Relationship,
-        Description:
+        id: '0',
+        gender: Gender.Male,
+        lookingFor: Gender.Female,
+        goal: Goal.Relationship,
+        description:
           'Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores at, eligendi id illum in molestias praesentium quia. Adipisci architecto asperiores autem consequatur ipsam iure magni nihil obcaecati repellendus ullam.',
-        Location: {
-          Country: 'Montenegro',
-          City: 'Bar',
-          Latitude: 19.092515,
-          Longitude: 42.099633,
+        location: {
+          country: 'Montenegro',
+          city: 'Bar',
+          latitude: 19.092515,
+          longitude: 42.099633,
         },
       },
       {
-        Id: '1',
-        Gender: Gender.Female,
-        LookingFor: Gender.Male,
-        Goal: Goal.Relationship,
-        Description: 'Description 2',
-        Location: {
-          Country: 'Montenegro',
-          City: 'Budva',
-          Latitude: 19.092515,
-          Longitude: 42.099633,
+        id: '1',
+        gender: Gender.Female,
+        lookingFor: Gender.Male,
+        goal: Goal.Relationship,
+        description: 'Description 2',
+        location: {
+          country: 'Montenegro',
+          city: 'Budva',
+          latitude: 19.092515,
+          longitude: 42.099633,
         },
       },
     ]);
