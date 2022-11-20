@@ -1,37 +1,50 @@
-<form
-    class="container"
-    [formGroup]="announcementForm"
->
-    <div class="tui-row">
-
-        <div class="tui-col_md-12">
-            <tui-text-area
-                formControlName=""
-                [expandable]="true"
-                [maxLength]="1000"
-            >
-                Your ad
-            </tui-text-area>
-        </div>
+<form class="container" [formGroup]="announcementForm">
+  <div class="tui-row">
+    <div class="tui-col_md-12">
+      <tui-text-area
+        formControlName="description"
+        [expandable]="true"
+        [maxLength]="1000"
+      >
+        Your ad
+      </tui-text-area>
     </div>
-    <div class="tui-row">
-
-        <div class="tui-col_md-6">
-            <tui-select formControlName="format" class="formatSelector">
-              Who are you:
-        <ng-template tuiDataList>
-          <tui-data-list>
-            <button
-              *ngFor="let item of generatorService.formatList"
-              tuiOption
-              [value]="item.code"
-            >
-              {{ item.label }}
-            </button>
-          </tui-data-list>
-        </ng-template>
+  </div>
+  <div class="tui-row">
+    <div class="tui-col_md-12">
+      <tui-select
+        formControlName="gender"
+        [tuiTextfieldLabelOutside]="true"
+        [valueContent]="enumContent"
+      >
+        Who are you:
+        <tui-data-list-wrapper
+          *tuiDataList
+          [items]="selectService.genderList | selectKeys"
+          [itemContent]="enumContent"
+        ></tui-data-list-wrapper>
       </tui-select>
-
-        </div>
     </div>
+  </div>
+  <div class="tui-row">
+    <div class="tui-col_md-12">
+      <tui-select
+        formControlName="lookingFor"
+        [tuiTextfieldLabelOutside]="true"
+        [valueContent]="enumContent"
+      >
+        Who are you looking for:
+        <tui-data-list-wrapper
+          *tuiDataList
+          [items]="selectService.genderList | selectKeys"
+          [itemContent]="enumContent"
+        ></tui-data-list-wrapper>
+      </tui-select>
+    </div>
+  </div>
+
+
+  <ng-template #enumContent let-item>
+    {{ item | selectValue: selectService.genderList }}
+  </ng-template>
 </form>

@@ -6,9 +6,6 @@ export enum Gender {
   Transgender,
 }
 
- export interface ISelectListItem<Gender> [] = [
-    { code:  Gender.Female , label: 'Female' },
-  ];
 export enum Goal {
   Relationship,
   Sex,

@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Gender, Goal } from '@interfaces/enums';
+import { SelectService } from '@services/select.service';
 
 @Component({
   selector: 'app-add',
@@ -10,14 +11,14 @@ import { Gender, Goal } from '@interfaces/enums';
 })
 export class AddComponent implements OnInit {
   announcementForm = new FormGroup({
-    Gender: new FormControl(Gender.Male, Validators.required),
-    LookingFor: new FormControl(Gender.Female, Validators.required),
-    Description: new FormControl('', [Validators.required, Validators.min(10)]),
-    Goal: new FormControl(Goal.Sex, Validators.required),
-    Location: new FormGroup({}),
-    User: new FormGroup({}),
+    gender: new FormControl(Gender.Male, Validators.required),
+    lookingFor: new FormControl(Gender.Female, Validators.required),
+    description: new FormControl('', [Validators.required, Validators.min(10)]),
+    goal: new FormControl(Goal.Sex, Validators.required),
+    location: new FormGroup({}),
+    user: new FormGroup({}),
   });
-  constructor() {}
+  constructor(public selectService: SelectService) {}
 
   ngOnInit(): void {}
 }
