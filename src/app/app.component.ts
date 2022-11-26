@@ -31,6 +31,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.loadList();
+    this.showAddDialog();
   }
 
   private loadList(): void {
